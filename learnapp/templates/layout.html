@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta Section -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="CryptoKingXavier">
+
+        <!-- Bootstrap CSS Links -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <!-- Document Title Setup -->
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>LearnApp</title>
+        {% endif %}
+
+        <!-- Placeholder for dynamic header content -->
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+        <main class="container-fluid">
+            <!-- Placeholder for dynamic body content -->
+            {% block body %}{% endblock %}
+
+            <!-- Bootstrap JS Links -->
+            <script src="{{ url_for('static', filename='jquery/jquery.slim.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+            <!-- Javascript Links -->
+            {% block js %}{% endblock %}
+        </main>
+    </body>
+
+</html>
